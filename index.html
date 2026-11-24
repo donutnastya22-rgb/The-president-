@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#edf2ef">
+  <meta name="description" content="The President — текстовая политическая RPG о решениях, кризисах и управлении государством.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <title>The President — ЦАР</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="topline">
+        <div class="president-rank"><span id="president-number">1-й</span> президент <strong id="country-short">ЦАР</strong></div>
+        <div class="year-age"><span>Год у власти <b id="year-in-office">1</b></span><span>Возраст <b id="president-age">45</b></span></div>
+        <div class="timeline"><strong id="current-year">2026</strong> · Президентство · ЦАР · <span>1 год ≈ 15 сек</span></div>
+      </div>
+      <div class="toolbar">
+        <button class="tool-btn" id="pause-btn">Ⅱ Пауза</button>
+        <button class="tool-btn speed active" data-speed="1">1×</button>
+        <button class="tool-btn speed" data-speed="2">2×</button>
+        <button class="tool-btn speed" data-speed="4">4×</button>
+        <button class="tool-btn primary-tool" id="next-btn">До следующего решения »</button>
+        <button class="tool-btn" id="auto-btn">Авторежим: выкл.</button>
+        <button class="tool-btn" id="music-btn">♫ Музыка: выкл.</button>
+        <button class="tool-btn" id="new-game-btn">Новая игра</button>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <section class="left-column">
+        <article class="panel identity-panel">
+          <div class="panel-ribbon"><span>ДАННЫЕ ПРЕЗИДЕНТА · ЦАР</span><span id="inauguration-year">2026</span></div>
+          <div class="identity-content">
+            <div class="pixel-portrait" aria-label="Пиксельный портрет президента">
+              <div class="portrait-sky"></div><div class="portrait-hair"></div><div class="portrait-face"></div>
+              <div class="portrait-neck"></div><div class="portrait-suit"></div><div class="portrait-sash"></div>
+            </div>
+            <div class="identity-details">
+              <h1 id="president-name">Президент Республики</h1>
+              <dl>
+                <div><dt>Пол</dt><dd id="president-gender">Не указан</dd></div>
+                <div><dt>Рождение</dt><dd id="birthplace">Банги · 1981</dd></div>
+                <div><dt>Резиденция</dt><dd>Президентский дворец · Банги</dd></div>
+                <div><dt>Происхождение</dt><dd id="background">Гражданская коалиция</dd></div>
+                <div><dt>Образование</dt><dd id="education">Государственное управление</dd></div>
+                <div><dt>Партия</dt><dd id="party">Национальный союз</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div class="passport-code">THE PRESIDENT · CAR · SAVE SLOT 01</div>
+        </article>
+
+        <article class="panel stats-panel">
+          <div class="panel-heading"><h2>Состояние государства</h2><span>0—100</span></div>
+          <div id="stats-list" class="stats-list"></div>
+          <div class="stat-explainer">Показатели — игровые индексы, а не официальная статистика страны. Последствия решений могут менять их на ±20 пунктов.</div>
+          <div class="treasury">
+            <div><span>Золотовалютный резерв</span><b id="reserve">$0,8 млрд</b></div>
+            <div><span>Бюджетный баланс</span><b id="budget">−3,2% ВВП</b></div>
+          </div>
+          <div class="small-note">Сложность: политический кризис · Напряжение: <b id="tension">42</b>/100</div>
+        </article>
+
+        <article class="panel country-panel">
+          <div class="panel-heading"><h2>Страна в цифрах</h2><span id="fact-year">2025</span></div>
+          <div id="country-facts" class="fact-grid"></div>
+          <p class="small-note">Статистические данные взяты из источников, перечисленных в разделе «О стране». В игре они служат стартовым контекстом.</p>
+          <button class="text-button" id="about-btn">О стране и источниках ↗</button>
+        </article>
+      </section>
+
+      <section class="right-column">
+        <article class="panel scene-panel">
+          <div class="pixel-scene" role="img" aria-label="Пиксельная иллюстрация президентского кабинета">
+            <div class="scene-window"><div class="sun"></div><div class="cloud cloud-one"></div><div class="cityline"></div><div class="river"></div></div>
+            <div class="scene-wall"></div><div class="flagpole"><i></i></div>
+            <div class="desk"><div class="paper"></div><div class="lamp"></div></div>
+            <div class="chair"></div><div class="pixel-president"><i></i></div>
+            <div class="scene-caption">ПРЕЗИДЕНТСКИЙ ДВОРЕЦ · БАНГИ · КАБИНЕТ</div>
+          </div>
+          <div class="scene-meta"><b id="scene-status">Рабочий день. Доклады ожидают подписи.</b><span id="scene-weather">Переменная облачность</span></div>
+        </article>
+
+        <article class="panel focus-panel">
+          <div class="panel-heading"><h2>Фокус этого года</h2><span id="focus-year">2026</span></div>
+          <p id="annual-focus">Первый год президентства. Вам предстоит определить приоритеты бюджета, укрепить государственные институты и сохранить доверие граждан.</p>
+          <div class="focus-tags"><span>ЦАР</span><span>Государственное управление</span><span id="events-left">События: 1</span></div>
+        </article>
+
+        <article class="panel chronicle-panel">
+          <div class="panel-heading"><h2>Хроника правления</h2><span>НОВЫЕ СВЕРХУ</span></div>
+          <p class="population-line">Сейчас в симуляции живёт <b>5,5 млн человек</b> · Центральноафриканская Республика</p>
+          <div id="chronicle" class="chronicle">
+            <div class="empty-chronicle">Здесь появятся ваши решения, последствия и политические повороты.</div>
+          </div>
+        </article>
+
+        <article class="panel map-panel">
+          <div class="panel-heading"><h2>Карта президентства</h2><span>1 КЛЕТКА = 1 ГОД</span></div>
+          <div id="presidency-map" class="presidency-map"></div>
+          <div class="map-legend"><span>Меньше доверия</span><i class="legend-red"></i><i class="legend-yellow"></i><i class="legend-green"></i><span>Больше доверия</span></div>
+          <p class="small-note">Рамка — текущий год. Один блок из четырёх клеток — один избирательный цикл.</p>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">THE PRESIDENT · Политическая RPG · Демоверсия 0.1 · <button class="text-button" id="rules-btn">Правила игры</button></footer>
+  </div>
+
+  <div class="modal-backdrop hidden" id="event-modal" role="dialog" aria-modal="true" aria-labelledby="event-title">
+    <div class="modal-card event-card">
+      <div class="modal-topline"><span id="event-year-label">ГОД 1 · СОБЫТИЕ 1</span><button class="close-btn" data-close="event-modal" aria-label="Закрыть">×</button></div>
+      <h2 id="event-title">Название события</h2>
+      <p id="event-description" class="event-description"></p>
+      <div class="fact-box"><span>СПРАВОЧНО</span><p id="event-fact"></p></div>
+      <h3 id="event-question">Какое решение вы примете?</h3>
+      <label class="decree-label" for="decree-input">Ваш указ или комментарий <small>(необязательно)</small></label>
+      <textarea id="decree-input" rows="2" placeholder="Запишите формулировку решения..."></textarea>
+      <div id="event-options" class="event-options"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="result-modal" role="dialog" aria-modal="true" aria-labelledby="result-title">
+    <div class="modal-card result-card">
+      <div class="modal-topline"><span>ГОСУДАРСТВЕННАЯ ХРОНИКА</span></div>
+      <h2 id="result-title">Результат решения</h2>
+      <p id="result-copy"></p>
+      <div id="result-deltas" class="result-deltas"></div>
+      <button class="action-btn" id="result-continue">Продолжить правление »</button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="election-modal" role="dialog" aria-modal="true">
+    <div class="modal-card result-card">
+      <div class="modal-topline"><span>ИЗБИРАТЕЛЬНАЯ КОМИССИЯ</span></div>
+      <h2 id="election-title">Выборы</h2>
+      <p id="election-copy"></p>
+      <button class="action-btn" id="election-continue">Продолжить »</button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="about-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-topline"><span>СПРАВОЧНАЯ СЛУЖБА</span><button class="close-btn" data-close="about-modal">×</button></div>
+      <h2>Центральноафриканская Республика</h2>
+      <p>Стартовые параметры страны основаны на опубликованных международных данных. Внутриигровые шкалы экономики, доверия, армии и политического капитала — условная игровая модель.</p>
+      <div id="source-links" class="source-links"></div>
+      <p class="small-note">Важно: события в JSON — сценарный материал для симуляции, а не утверждение, что все описанные эпизоды происходили именно так. Отдельные статистические формулировки из пользовательского набора событий могут требовать дополнительной проверки.</p>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="rules-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-topline"><span>ИНСТРУКЦИЯ</span><button class="close-btn" data-close="rules-modal">×</button></div>
+      <h2>Правила игры</h2>
+      <ul class="rules-list">
+        <li>Один игровой год — один цикл решений. При высоком напряжении в год может выпадать больше событий.</li>
+        <li>Каждое событие можно пройти только один раз. Выбор меняет пять игровых показателей и напряжение.</li>
+        <li>Цепные события добавляются в очередь следующего года, если выбранный вариант их запускает.</li>
+        <li>Каждые четыре года проходят выборы. Для переизбрания нужны Народ и Политический капитал выше 40.</li>
+        <li>Политический капитал на нуле означает импичмент. После 60 лет здоровье президента постепенно снижается.</li>
+        <li>Сохранение работает локально в браузере этого устройства. Для переноса между устройствами понадобится отдельная база данных.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
