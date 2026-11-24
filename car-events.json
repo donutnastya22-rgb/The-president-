@@ -1,0 +1,1610 @@
+[
+  {
+    "event_id": "car_rebel_offensive",
+    "country_id": "car",
+    "title": "Наступление коалиции CPC",
+    "description": "Бывший президент Бозизе объединил вооружённые группы в «Коалицию патриотов за перемены». Их отряды перешли границу и заняли два города на северо-западе. Генштаб докладывает: без внешней поддержки столицу удержать будет тяжело.",
+    "fact_box": "Советник по безопасности: «Силы обороны — 7 тыс. бойцов против 15 тыс. у коалиции. Мандат миротворцев не позволяет им воевать за нас».",
+    "question": "Как вы ответите на наступление?",
+    "options": [
+      {
+        "option_text": "Запросить срочную военную помощь у России (инструкторы и ЧВК)",
+        "consequences": {
+          "economy": -5,
+          "people": 5,
+          "military": 15,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Фронт стабилизируется, но вы дарите ключи от страны чужой силовой структуре.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Опираться только на армию и миротворцев ООН",
+        "consequences": {
+          "economy": -3,
+          "people": -10,
+          "military": -10,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Суверенитет сохранён, но города падают один за другим, и народ задаёт вопросы.",
+        "chained_event_id": "car_convoy_ambush"
+      },
+      {
+        "option_text": "Начать переговоры с лидерами коалиции о разделе власти",
+        "consequences": {
+          "economy": 5,
+          "people": -5,
+          "military": -15,
+          "political_capital": -10,
+          "health": 0
+        },
+        "option_flavor": "Перемирие на бумаге. Армия считает вас слабаком.",
+        "chained_event_id": "car_coup_rumor"
+      }
+    ],
+    "tension_change": "+15"
+  },
+  {
+    "event_id": "car_convoy_ambush",
+    "country_id": "car",
+    "title": "Засада на колонну с гуманитарной помощью",
+    "description": "Конвой Всемирной программы питания подорвался на фугасе в 40 км от города Кага-Бандоро. Погибли трое водителей. Дороги на севере фактически потеряны, цены на продовольствие в столице начали расти.",
+    "fact_box": "Из 24 000 км дорог страны заасфальтировано лишь 692 км. В сезон дождей снабжение севера превращается в лотерею.",
+    "question": "Что предпримете?",
+    "options": [
+      {
+        "option_text": "Нанять охрану конвоев из российских структур",
+        "consequences": {
+          "economy": -5,
+          "people": 5,
+          "military": 8,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Конвои пойдут, но иностранные бойцы в городах заметят все.",
+        "chained_event_id": "car_russia_protests"
+      },
+      {
+        "option_text": "Объявить чрезвычайное положение на севере",
+        "consequences": {
+          "economy": -8,
+          "people": -8,
+          "military": 5,
+          "political_capital": 3,
+          "health": 0
+        },
+        "option_flavor": "Комендантский час успокоит фронт, но заглушит и торговлю.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Ограничиться осуждением в СМИ",
+        "consequences": {
+          "economy": -3,
+          "people": -12,
+          "military": -3,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Словами гуманитарную катастрофу не накормишь.",
+        "chained_event_id": "car_food_inflation"
+      }
+    ],
+    "tension_change": "+8"
+  },
+  {
+    "event_id": "car_wagner_arrival",
+    "country_id": "car",
+    "title": "Инструкторы прибыли в Банги",
+    "description": "Самолёт с российскими военными инструкторами приземлился в столице ночью, в обход парламентского комитета. Они готовы защищать дворец и обучать армию. Посольство Франции требует объяснений. Утром у посольства собирается толпа.",
+    "fact_box": "По опросам, 40% горожан относятся к русским позитивно — они «заставили улицы замолчать». Элиты боятся потери контроля над армией.",
+    "question": "Как оформить их присутствие?",
+    "options": [
+      {
+        "option_text": "Подписать соглашение и дать им мандат на тренировку армии",
+        "consequences": {
+          "economy": 0,
+          "people": 8,
+          "military": 15,
+          "political_capital": -8,
+          "health": 0
+        },
+        "option_flavor": "Безопасность растёт. Зависимость — тоже.",
+        "chained_event_id": "car_gold_ndassima"
+      },
+      {
+        "option_text": "Ограничить мандат охраной дворца и высшего командования",
+        "consequences": {
+          "economy": 0,
+          "people": -3,
+          "military": 6,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Компромисс, который не устроит ни Москву, ни Париж.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Отправить самолёт обратно",
+        "consequences": {
+          "economy": 0,
+          "people": -10,
+          "military": -15,
+          "political_capital": 8,
+          "health": 0
+        },
+        "option_flavor": "Суверенный жест. Рискованный.",
+        "chained_event_id": "car_rebel_offensive"
+      }
+    ],
+    "tension_change": "+6"
+  },
+  {
+    "event_id": "car_coup_rumor",
+    "country_id": "car",
+    "title": "Слухи о заговоре в Генштабе",
+    "description": "Ночью командующий президентской гвардией не отвечал на связь 4 часа. Контрразведка докладывает: группа офицеров недовольна «капитуляцией перед мятежниками» и тем, что зарплату задерживают третий месяц.",
+    "fact_box": "В ЦАР каждый президент с 1993 года либо проигрывал выборы при низкой явке, либо терял власть в результате переворота. Средний срок жизни военного правителя — 3 года.",
+    "question": "Ваши действия?",
+    "options": [
+      {
+        "option_text": "Арестовать подозреваемых офицеров до выяснения",
+        "consequences": {
+          "economy": 0,
+          "people": -5,
+          "military": -8,
+          "political_capital": 10,
+          "health": -5
+        },
+        "option_flavor": "Заговор (если был) задушен. Армия напугана.",
+        "chained_event_id": "car_officer_defection"
+      },
+      {
+        "option_text": "Поднять зарплаты армии за счёт соцрасходов",
+        "consequences": {
+          "economy": -10,
+          "people": -8,
+          "military": 12,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Лояльность куплена. Бюджет истощён.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Проигнорировать — пусть гудят",
+        "consequences": {
+          "economy": 0,
+          "people": 0,
+          "military": -12,
+          "political_capital": -15,
+          "health": 0
+        },
+        "option_flavor": "Ночь переворота начнётся внезапно.",
+        "chained_event_id": "car_coup_attempt"
+      }
+    ],
+    "tension_change": "+12"
+  },
+  {
+    "event_id": "car_coup_attempt",
+    "country_id": "car",
+    "title": "Ночь длинных автоматов",
+    "description": "Батальон, расквартированный в районе КМ5, перекрыл подступы к дворцу. В эфире военной радиостанции — заявление о «комитете национального спасения». Российские инструкторы спрашивают: нужен ли приказ на отражение штурма?",
+    "fact_box": "Президентская гвардия насчитывает 1 200 бойцов. Батальон у КМ5 — 800. Исход зависит от того, кто первым платит.",
+    "question": "Решайте сейчас.",
+    "options": [
+      {
+        "option_text": "Приказать русским отбить атаку любой ценой",
+        "consequences": {
+          "economy": -5,
+          "people": -5,
+          "military": 10,
+          "political_capital": -10,
+          "health": -10
+        },
+        "option_flavor": "Дворец устоит. Ваша независимость — под вопросом навсегда.",
+        "chained_event_id": "car_russia_protests"
+      },
+      {
+        "option_text": "Пойти на переговоры, обещать амнистию и выборы",
+        "consequences": {
+          "economy": 5,
+          "people": 5,
+          "military": -10,
+          "political_capital": -20,
+          "health": 0
+        },
+        "option_flavor": "Кровь не прольётся. Авторитет — тоже.",
+        "chained_event_id": null
+      }
+    ],
+    "tension_change": "+18"
+  },
+  {
+    "event_id": "car_officer_defection",
+    "country_id": "car",
+    "title": "Полковник перешёл к мятежникам",
+    "description": "Один из арестованных офицеров успел бежать и прибыл в штаб коалиции CPC. Он знает планы обороны столицы и номера счетов, на которые шли «серые» зарплаты. В его интервью — фотографии ваших документов.",
+    "fact_box": "Экс-офицеры руководят минимум тремя из шести крупных вооружённых групп ЦАР. Самая сильная группировка «3R» — бывшие кадровые военные.",
+    "question": "Как реагируете?",
+    "options": [
+      {
+        "option_text": "Обвинить его в госизмене заочно и усилить гвардию",
+        "consequences": {
+          "economy": -3,
+          "people": -3,
+          "military": 5,
+          "political_capital": 3,
+          "health": 0
+        },
+        "option_flavor": "Контрмера адекватная, но страх в армии растёт.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Предложить деньги за его выдачу через посредников",
+        "consequences": {
+          "economy": -10,
+          "people": -5,
+          "military": 2,
+          "political_capital": -3,
+          "health": 0
+        },
+        "option_flavor": "Посредники возьмут деньги. Выдадут ли — вопрос.",
+        "chained_event_id": null
+      }
+    ],
+    "tension_change": "+7"
+  },
+  {
+    "event_id": "car_africa_corps",
+    "country_id": "car",
+    "title": "«Вагнер» становится «Африканским корпусом»",
+    "description": "После гибели Пригожина Москва предлагает «упорядочить» присутствие: формальное подчинение Минобороны, новая структура, новые контракты. Старшие командиры на местах требуют сохранить старые коммерческие схемы.",
+    "fact_box": "Структуры, связанные с «Вагнером», добывают в ЦАР около 5 тонн золота в год. Часть выручки уходит мимо бюджета — напрямую на счета группы.",
+    "question": "Кого поддержать?",
+    "options": [
+      {
+        "option_text": "Подписать переходный протокол с Минобороны РФ",
+        "consequences": {
+          "economy": 5,
+          "people": 0,
+          "military": 8,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Получите более управляемого партнёра. И более постоянного.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Сохранить контракты со «старыми» командирами",
+        "consequences": {
+          "economy": 3,
+          "people": -3,
+          "military": -2,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Предсказуемая коррупция лучше непредсказуемой армии.",
+        "chained_event_id": "car_smuggling_scandal"
+      }
+    ],
+    "tension_change": "+5"
+  },
+  {
+    "event_id": "car_gold_ndassima",
+    "country_id": "car",
+    "title": "Рудник Ндассима: вопрос одного подписания",
+    "description": "Ваша делегация вернулась с предложением: российские компании реконструируют рудник Ндассима, самый богатый в стране, в обмен на эксклюзивные права на 25 лет. Минфин подсчитал: бюджет получит в 8 раз больше, чем сейчас. Министр юстиции бледнеет.",
+    "fact_box": "Сейчас рудник контролируется местной вооружённой группой, которая сдаёт его артельным старателям. Официально из него не извлекается ни грамма.",
+    "question": "Подписывать?",
+    "options": [
+      {
+        "option_text": "Подписать. Золото нужно стране сейчас",
+        "consequences": {
+          "economy": 15,
+          "people": 5,
+          "military": 3,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "ВВП взлетит. Независимость подорожеет.",
+        "chained_event_id": "car_smuggling_scandal"
+      },
+      {
+        "option_text": "Передать рудник консорциуму под контролем государства",
+        "consequences": {
+          "economy": 6,
+          "people": -3,
+          "military": -3,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Медленнее и честнее. Партнёры раздражены.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Отказать: дадим лицензию местной артели",
+        "consequences": {
+          "economy": -12,
+          "people": -8,
+          "military": 5,
+          "political_capital": 8,
+          "health": 0
+        },
+        "option_flavor": "Суверенитет уцелел. Золото уйдёт в тень.",
+        "chained_event_id": "car_gold_smuggling"
+      }
+    ],
+    "tension_change": "+4"
+  },
+  {
+    "event_id": "car_smuggling_scandal",
+    "country_id": "car",
+    "title": "«Золотой самолёт» попал в объектив",
+    "description": "Журналисты опубликовали расследование: грузовой борт из Банги совершил 14 рейсов в Дубай с «гуманитарным грузом». Таможенная декларация: медикаменты. Фотографии: ящики со слитками. Вопросы задают и Москва, и ООН.",
+    "fact_box": "Крупные камни (например, найденный в 2025 году алмаз 177 карат) регулярно исчезают без официального экспорта. Оценочный объём контрабанды — до 60% добычи.",
+    "question": "Ваш ход?",
+    "options": [
+      {
+        "option_text": "Обвинить журналистов во лжи и закрыть тему",
+        "consequences": {
+          "economy": 5,
+          "people": -12,
+          "military": 0,
+          "political_capital": -8,
+          "health": 0
+        },
+        "option_flavor": "Скандал замнут. Доверие — тоже.",
+        "chained_event_id": "car_press_law"
+      },
+      {
+        "option_text": "Начать «независимый аудит» с участием Кимберлийского процесса",
+        "consequences": {
+          "economy": -10,
+          "people": 8,
+          "military": -2,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Прозрачность дорого стоит. Включая друзей.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Переадресовать вопрос «партнёрам», с которыми подписан контракт",
+        "consequences": {
+          "economy": -5,
+          "people": -8,
+          "military": 2,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Вы не отвечаете. Отвечать будут за вас.",
+        "chained_event_id": "car_russia_protests"
+      }
+    ],
+    "tension_change": "+9"
+  },
+  {
+    "event_id": "car_gold_smuggling",
+    "country_id": "car",
+    "title": "Артели вывозят золото в Камерун",
+    "description": "Разведка доложила: до 3 тонн золота в год пересекают границу в Камерун на велосипедах и каноэ, минуя все посты. В обмен на кукурузу, топливо и телефоны. Бюджет теряет миллионы.",
+    "fact_box": "Официальный экспорт золота вырос с менее 1 тонны (2021) до более 7 тонн (2025) — но параллельный поток через Камерун оценивается сопоставимо.",
+    "question": "Что делать?",
+    "options": [
+      {
+        "option_text": "Создать официальные пункты скупки золота у границы",
+        "consequences": {
+          "economy": 8,
+          "people": 3,
+          "military": 0,
+          "political_capital": 2,
+          "health": 0
+        },
+        "option_flavor": "Часть потока легализуется. Посты нужно охранять.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Усилить погранпосты и ввести штрафы для караванов",
+        "consequences": {
+          "economy": -5,
+          "people": -10,
+          "military": 5,
+          "political_capital": 0,
+          "health": 0
+        },
+        "option_flavor": "Контрабанда замедлится. Цены на еду вырастут.",
+        "chained_event_id": "car_food_inflation"
+      }
+    ],
+    "tension_change": "+4"
+  },
+  {
+    "event_id": "car_fuel_crisis",
+    "country_id": "car",
+    "title": "Очереди за бензином до горизонта",
+    "description": "Камерунская компания-импортёр «Нептун Ойл», единственный поставщик топлива, остановила отгрузки: долг за прошлые поставки — $40 млн. В стране 15 заправок на 5 млн человек. Генераторы больниц умолкают одни за другими.",
+    "fact_box": "Топливо в Банги стоит в 2,5 раза дороже, чем в Дуале. 20% семейного бюджета уходит на свет и топливо.",
+    "question": "Как спасать энергосистему?",
+    "options": [
+      {
+        "option_text": "Выплатить долг из резерва и продлить лицензию «Нептуну»",
+        "consequences": {
+          "economy": -12,
+          "people": 8,
+          "military": 3,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Очереди исчезнут. Монополия укрепится.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Разорвать контракт и открыть рынок новым игрокам",
+        "consequences": {
+          "economy": -8,
+          "people": -10,
+          "military": 0,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Перерыв в поставках — 2–3 месяца хаоса. Потом — конкуренция.",
+        "chained_event_id": "car_blackout_protests"
+      },
+      {
+        "option_text": "Попросить «партнёров» наладить параллельную поставку",
+        "consequences": {
+          "economy": 5,
+          "people": 5,
+          "military": 2,
+          "political_capital": -10,
+          "health": 0
+        },
+        "option_flavor": "Топливо потечёт. Продавать его будут не вы.",
+        "chained_event_id": "car_russia_protests"
+      }
+    ],
+    "tension_change": "+11"
+  },
+  {
+    "event_id": "car_blackout_protests",
+    "country_id": "car",
+    "title": "КМ5 требует света",
+    "description": "Третий день мусульманский квартал КМ5 перекрыт баррикадами. Люди вышли не за политикой — за электричеством: ГЭС Боали даёт 15 мегаватт при потребности 50. В магазинах портится всё, от мяса до вакцин.",
+    "fact_box": "Менее 10% горожан имеют доступ к электросети. Даже подключённые получают 4 часа света в сутки.",
+    "question": "Ваш приказ?",
+    "options": [
+      {
+        "option_text": "Разогнать протест силами гвардии и русских инструкторов",
+        "consequences": {
+          "economy": 0,
+          "people": -18,
+          "military": 8,
+          "political_capital": -5,
+          "health": -5
+        },
+        "option_flavor": "Улица очистится. Гнев останется.",
+        "chained_event_id": "car_km5_uprising"
+      },
+      {
+        "option_text": "Выделить деньги на солнечные мини-сети для квартала",
+        "consequences": {
+          "economy": -10,
+          "people": 12,
+          "military": -2,
+          "political_capital": 8,
+          "health": 3
+        },
+        "option_flavor": "Конкретное решение для конкретных людей.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Обещать «большую энергетическую реформу» после дождей",
+        "consequences": {
+          "economy": 0,
+          "people": -12,
+          "military": 0,
+          "political_capital": -8,
+          "health": 0
+        },
+        "option_flavor": "Обещания в ЦАР стоят столько же, сколько электричество — ничего.",
+        "chained_event_id": null
+      }
+    ],
+    "tension_change": "+13"
+  },
+  {
+    "event_id": "car_km5_uprising",
+    "country_id": "car",
+    "title": "КМ5 горит",
+    "description": "Разгон перерос в восстание. Боевики из ближайших районов подтянулись к баррикадам с оружием. Торговый центр столицы фактически потерян. Цены на импортные товары удвоились за неделю. Российские посты на окраинах держатся, но в квартал не заходят.",
+    "fact_box": "КМ5 — экономическое сердце Банги: 40% розничной торговли столицы. Каждый день блокады — миллионы потерь.",
+    "question": "Эскалация неизбежна. Выбирайте.",
+    "options": [
+      {
+        "option_text": "Ввести комендантский час и круглосуточный патруль партнёров",
+        "consequences": {
+          "economy": -10,
+          "people": -15,
+          "military": 10,
+          "political_capital": -10,
+          "health": -10
+        },
+        "option_flavor": "Квартал под контролем. Столица в осадной повадке.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Начать переговоры с торговыми старейшинами, отменить рост тарифов",
+        "consequences": {
+          "economy": -8,
+          "people": 8,
+          "military": -8,
+          "political_capital": -3,
+          "health": 0
+        },
+        "option_flavor": "Квартал откроется. Сила будет казаться побеждённой.",
+        "chained_event_id": null
+      }
+    ],
+    "tension_change": "+15"
+  },
+  {
+    "event_id": "car_food_inflation",
+    "country_id": "car",
+    "title": "Мука подорожала на треть",
+    "description": "Цены на продовольствие выросли на 30% за квартал. В супермаркетах Банги полки пустеют, на рынках женщины продают порцию риса на глазах. В сельской местности 78% людей живут менее чем на $3 в день — теперь и они чувствуют разницу.",
+    "fact_box": "Страна импортирует 60% потребляемой еды. Любой сбой дороги в Камерун — это голод в течение месяца.",
+    "question": "Чем отвечаете?",
+    "options": [
+      {
+        "option_text": "Ввести временные ценовые ограничения на базовые продукты",
+        "consequences": {
+          "economy": -8,
+          "people": 10,
+          "military": 0,
+          "political_capital": 5,
+          "health": 3
+        },
+        "option_flavor": "Социальный мир куплен. Дефицит куплен тоже.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Субсидировать импортёров из резерва",
+        "consequences": {
+          "economy": -12,
+          "people": 5,
+          "military": 0,
+          "political_capital": 3,
+          "health": 0
+        },
+        "option_flavor": "Резерв тает быстрее, чем вера в него.",
+        "chained_event_id": "car_imf_review"
+      },
+      {
+        "option_text": "Ничего: рынок сам всё урегулирует",
+        "consequences": {
+          "economy": 3,
+          "people": -18,
+          "military": 0,
+          "political_capital": -12,
+          "health": -5
+        },
+        "option_flavor": "Рынок урегулирует. Население — тоже.",
+        "chained_event_id": "car_km5_uprising"
+      }
+    ],
+    "tension_change": "+10"
+  },
+  {
+    "event_id": "car_imf_review",
+    "country_id": "car",
+    "title": "МВФ откладывает проверку программы",
+    "description": "Миссия МВФ уехала, так и не подписав обзор программы ECF. Формально — «задержка в предоставлении данных». Неофициально — вопросы о том, куда девается золотая рента и почему резерв падает третий месяц.",
+    "fact_box": "Программа ECF открывает доступ к $200 млн концессиональных средств и «зелёный свет» для других доноров. Без неё страна сидит на дорогих региональных займах под 8–10%.",
+    "question": "Как возвращать доверие кредиторов?",
+    "options": [
+      {
+        "option_text": "Опубликовать аудит золотого сектора и обнародовать контракты",
+        "consequences": {
+          "economy": -8,
+          "people": 5,
+          "military": -2,
+          "political_capital": 10,
+          "health": 0
+        },
+        "option_flavor": "Прозрачность приведёт к прозрачному раздражению партнёров.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Обвинить МВФ в «неоколониальных методах» и искать деньги у друзей",
+        "consequences": {
+          "economy": -15,
+          "people": 8,
+          "military": 0,
+          "political_capital": -8,
+          "health": 0
+        },
+        "option_flavor": "Популистский ход. Деньги придут — но на своих условиях.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Продать часть золотого запаса, чтобы закрыть дыру",
+        "consequences": {
+          "economy": 5,
+          "people": -5,
+          "military": 0,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Быстро. Дорого. Одноразово.",
+        "chained_event_id": null
+      }
+    ],
+    "tension_change": "+7"
+  },
+  {
+    "event_id": "car_water_crisis",
+    "country_id": "car",
+    "title": "Банги остаётся без воды",
+    "description": "Насосная станция SODECA вышла из строя: оборудование 1970-х годов окончательно сдалось. 27% горожан, у кого был кран, теперь несут воду из Убанги. Врачи фиксируют вспышку кишечных инфекций.",
+    "fact_box": "Канализацией охвачено менее 1% домохозяйств. Каждый ливень превращает улицы в открытые стоки — идеальную среду для холеры.",
+    "question": "Решение?",
+    "options": [
+      {
+        "option_text": "Экстренно законтрактовать ремонт у международной организации",
+        "consequences": {
+          "economy": -10,
+          "people": 12,
+          "military": 0,
+          "political_capital": 8,
+          "health": 8
+        },
+        "option_flavor": "Доноры любят воду. Она же, в отличие от золота, не украдётся.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Поручить ремонт «партнёрским структурам»",
+        "consequences": {
+          "economy": -5,
+          "people": 3,
+          "military": 0,
+          "political_capital": -5,
+          "health": 3
+        },
+        "option_flavor": "Быстро и без тендеров. Качество — как всегда.",
+        "chained_event_id": "car_smuggling_scandal"
+      },
+      {
+        "option_text": "Объявить сбор средств «народной инициативой»",
+        "consequences": {
+          "economy": 0,
+          "people": -15,
+          "military": 0,
+          "political_capital": -10,
+          "health": -8
+        },
+        "option_flavor": "Люди, живущие на $3 в день, оценили вашу находчивость.",
+        "chained_event_id": "car_cholera"
+      }
+    ],
+    "tension_change": "+10"
+  },
+  {
+    "event_id": "car_cholera",
+    "country_id": "car",
+    "title": "Холера в трёх округах",
+    "description": "Минздрав подтверждает: 340 случаев, 12 смертей, очаги в районах, где перебои с водой затянулись. Госпитальная база страны — 5 койко-мест на 10 000 человек. ООН предлагает экстренную вакцинацию.",
+    "fact_box": "Диарейные болезни — третья причина смерти детей до 5 лет. Эпидемия холеры при нехватке антибиотиков убивает до 3% заболевших.",
+    "question": "Ваши действия?",
+    "options": [
+      {
+        "option_text": "Запросить международную вакцинальную кампанию и ввести ЧС",
+        "consequences": {
+          "economy": -5,
+          "people": 15,
+          "military": 0,
+          "political_capital": 10,
+          "health": 12
+        },
+        "option_flavor": "Скромная цена за спасённые жизни.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Ограничиться раздачей буклетов о гигиене",
+        "consequences": {
+          "economy": 0,
+          "people": -20,
+          "military": 0,
+          "political_capital": -15,
+          "health": -15
+        },
+        "option_flavor": "Буклеты не лечат. Голоса лечат — вы потеряете оба.",
+        "chained_event_id": "car_km5_uprising"
+      }
+    ],
+    "tension_change": "+12"
+  },
+  {
+    "event_id": "car_floods",
+    "country_id": "car",
+    "title": "Дожди отрезали полстраны",
+    "description": "Сезонные ливни размыли грунтовые дороги. 14 префектур из 20 сообщаются со столицей только по воздуху или вовсе изолированы. Цены на соль и масло на севере выросли вдвое. Гуманитарные агентства просят коридор для воздушных мостов.",
+    "fact_box": "Из 24 000 км дорог заасфальтировано 692 км. Стоимость содержания одного км грунтовки в сезон дождей — в 4 раза выше сухой.",
+    "question": "Реагируете?",
+    "options": [
+      {
+        "option_text": "Разрешить гуманитарные воздушные мосты и арендовать вертолёты",
+        "consequences": {
+          "economy": -10,
+          "people": 12,
+          "military": 5,
+          "political_capital": 5,
+          "health": 5
+        },
+        "option_flavor": "Дорого, эффективно, временно.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Направить армию на расчистку главных трасс",
+        "consequences": {
+          "economy": -3,
+          "people": 5,
+          "military": -5,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Инженерные батальоны работают. Солдаты не обучены и не мотивированы.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Ждать, пока высохнет",
+        "consequences": {
+          "economy": -8,
+          "people": -15,
+          "military": 0,
+          "political_capital": -12,
+          "health": -8
+        },
+        "option_flavor": "Высохнет за 4 месяца. До того — голод и изоляция.",
+        "chained_event_id": "car_food_inflation"
+      }
+    ],
+    "tension_change": "+8"
+  },
+  {
+    "event_id": "car_megacity",
+    "country_id": "car",
+    "title": "Проект «Банги-мегаполис» за $42 млрд",
+    "description": "Иностранная фирма представила глянцевый план: 12 полос, трамвай, небоскрёбы на месте трущоб. Финансирование — «за счёт будущих концессий». Мэрия в восторге. МВФ прислал письмо с одним вопросом: «Кто платит?»",
+    "fact_box": "70% городского населения живут в условиях крайней бедности. Мегапроект 1970-х — «трамвай Бозизе» — так и не был достроен; пути ржавеют до сих пор.",
+    "question": "Подписывать меморандум?",
+    "options": [
+      {
+        "option_text": "Подписать. Стране нужен символ",
+        "consequences": {
+          "economy": -10,
+          "people": 10,
+          "military": 0,
+          "political_capital": -8,
+          "health": 0
+        },
+        "option_flavor": "Картинки в новостях есть. Денег — нет. Письма МВФ — тоже.",
+        "chained_event_id": "car_imf_review"
+      },
+      {
+        "option_text": "Перенаправить внимание на воду и электричество",
+        "consequences": {
+          "economy": -5,
+          "people": 12,
+          "military": 0,
+          "political_capital": 8,
+          "health": 5
+        },
+        "option_flavor": "Скучно. Нужно. Работает.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Согласиться, но скрыть контракт от парламента",
+        "consequences": {
+          "economy": -15,
+          "people": 5,
+          "military": 0,
+          "political_capital": -15,
+          "health": 0
+        },
+        "option_flavor": "Когда всплывёт — всплывёт всё.",
+        "chained_event_id": "car_smuggling_scandal"
+      }
+    ],
+    "tension_change": "+6"
+  },
+  {
+    "event_id": "car_referendum",
+    "country_id": "car",
+    "title": "Референдум о конституции",
+    "description": "Инициативная группа (вся — из вашей партии) предлагает убрать ограничение на два президентских срока и продлить срок с 5 до 7 лет. Оппозиция кричит о «конституционном перевороте». Международные наблюдатели просят прозрачного подсчёта.",
+    "fact_box": "В 2023 году аналогичный референдум прошёл с 95% «за» при явке, которую независимые наблюдатели назвали «невозможной для страны с нашей инфраструктурой».",
+    "question": "Как провести голосование?",
+    "options": [
+      {
+        "option_text": "Прозрачно: наблюдатели, живое вещание подсчёта",
+        "consequences": {
+          "economy": 0,
+          "people": 10,
+          "military": 0,
+          "political_capital": 10,
+          "health": 0
+        },
+        "option_flavor": "Рискованно честно. Может не пройти — и это нормально.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Как обычно: админресурс, «мёртвые души», быстрый подсчёт",
+        "consequences": {
+          "economy": 5,
+          "people": -15,
+          "military": 3,
+          "political_capital": -12,
+          "health": 0
+        },
+        "option_flavor": "95% «за». Все всё поняли.",
+        "chained_event_id": "car_street_protests"
+      },
+      {
+        "option_text": "Отказаться от референдума «во имя стабильности»",
+        "consequences": {
+          "economy": 0,
+          "people": -8,
+          "military": -2,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Ни реформы, ни доверия. Только срок.",
+        "chained_event_id": null
+      }
+    ],
+    "tension_change": "+12"
+  },
+  {
+    "event_id": "car_street_protests",
+    "country_id": "car",
+    "title": "«Туадера — уходи!»",
+    "description": "Тысячи людей вышли на проспект Боганда. Требования: отставка, отмена итогов референдума, уход иностранных наёмников. Лидеры оппозиции арестованы накануне — толпа этим разозлена ещё сильнее. Полиция стоит в цепи, ждёт приказа.",
+    "fact_box": "В 2021 году подобный митинг закончился расстрелом: 12 погибших. С тех пор протестующие идут с флагами и детьми — расстреливать детей сложнее.",
+    "question": "Приказ полиции?",
+    "options": [
+      {
+        "option_text": "Разогнать резиновыми пулями и водомётами",
+        "consequences": {
+          "economy": 0,
+          "people": -18,
+          "military": 5,
+          "political_capital": -10,
+          "health": -8
+        },
+        "option_flavor": "Площадь очистят к вечеру. Список погибших станет завтрашней новостью.",
+        "chained_event_id": "car_sanctions_threat"
+      },
+      {
+        "option_text": "Пусть митингуют. Назначить переговорную группу",
+        "consequences": {
+          "economy": 0,
+          "people": 12,
+          "military": -5,
+          "political_capital": 8,
+          "health": 0
+        },
+        "option_flavor": "Сила, которая не применена, — это тоже сила.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Обвинить организаторов в связях с CPC и арестовать",
+        "consequences": {
+          "economy": -3,
+          "people": -12,
+          "military": 3,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Лидеры в следственном изоляторе. Улица без лидеров — страшнее.",
+        "chained_event_id": "car_sanctions_threat"
+      }
+    ],
+    "tension_change": "+16"
+  },
+  {
+    "event_id": "car_press_law",
+    "country_id": "car",
+    "title": "Закон о «преступлениях против прессы»",
+    "description": "Парламент (ваше большинство) принял в первом чтении закон, возвращающий уголовную ответственность за «дискредитацию власти». Председатель Союза журналистов объявил голодовку. Посольства ЕС и США ждут вашего решения о подписании.",
+    "fact_box": "В рейтинге свободы прессы Reporters Without Borders ЦАР — 115-е место из 180. После аналогичного закона в соседней стране иностранные корреспонденты уехали, а инвесторы — за ними.",
+    "question": "Подписать?",
+    "options": [
+      {
+        "option_text": "Подписать. Тишина — основа стабильности",
+        "consequences": {
+          "economy": 3,
+          "people": -10,
+          "military": 0,
+          "political_capital": 8,
+          "health": 0
+        },
+        "option_flavor": "СМИ притихнут. Деньги и репутация — тоже.",
+        "chained_event_id": "car_sanctions_threat"
+      },
+      {
+        "option_text": "Ветировать и предложить гражданскую ответственность вместо уголовной",
+        "consequences": {
+          "economy": -3,
+          "people": 12,
+          "military": -2,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Парламент обидится. Мир скажет спасибо.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Подписать, но «не применять»",
+        "consequences": {
+          "economy": 0,
+          "people": -8,
+          "military": 0,
+          "political_capital": 0,
+          "health": 0
+        },
+        "option_flavor": "Самый худший вариант: закон есть, ответственности нет ни за что.",
+        "chained_event_id": "car_journalist_exile"
+      }
+    ],
+    "tension_change": "+9"
+  },
+  {
+    "event_id": "car_journalist_exile",
+    "country_id": "car",
+    "title": "Главная газета страны уходит в онлайн-изгнание",
+    "description": "Редакция «Ле Сэнгеле» перевезла серверы в Дакар и публикует из автономки. Последний материал — о том, как ваша охрана покупает недвижимость за рубежом. Цитируют все: от Франс Пресс до соседнего радио.",
+    "fact_box": "Интернет в ЦАР — 10% проникновения. Но каждый пользователь рассказывает ещё пятерым устно. Скандал распространяется быстрее, чем газеты.",
+    "question": "Реакция?",
+    "options": [
+      {
+        "option_text": "Игнорировать: пусть пишут",
+        "consequences": {
+          "economy": -5,
+          "people": 8,
+          "military": 0,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Скандал выдохнется за неделю. Цитаты — никогда.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Подать иск о защите чести и достоинства",
+        "consequences": {
+          "economy": 0,
+          "people": -10,
+          "military": 0,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Суд выиграете. Смысл проиграете.",
+        "chained_event_id": "car_sanctions_threat"
+      }
+    ],
+    "tension_change": "+6"
+  },
+  {
+    "event_id": "car_sanctions_threat",
+    "country_id": "car",
+    "title": "Ультиматум ЕС и США",
+    "description": "После расстрелов и арестов журналистов Запад готовит пакет: персональные санкции против 12 чиновников (включая, слухи, вашего брата), заморозка счетов, запрет на полёты. Российский посол в тот же день предлагает «альтернативную интеграцию».",
+    "fact_box": "Прямая западная помощь — $180 млн в год. Российская — в основном военная. Заменить одно другим полностью страна не может.",
+    "question": "Что ответить Западу?",
+    "options": [
+      {
+        "option_text": "Пойти на уступки: расследование расстрелов, освобождение журналистов",
+        "consequences": {
+          "economy": 5,
+          "people": 10,
+          "military": -5,
+          "political_capital": -8,
+          "health": 0
+        },
+        "option_flavor": "Партнёры на Востоке посмотрят с сомнением.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Проигнорировать ультиматум",
+        "consequences": {
+          "economy": -15,
+          "people": -5,
+          "military": 5,
+          "political_capital": 10,
+          "health": 0
+        },
+        "option_flavor": "Счета заморожены. Дверь на Запад закрыта.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Обвинить Запад во вмешательстве и устроить показательные аресты «агентов»",
+        "consequences": {
+          "economy": -8,
+          "people": -10,
+          "military": 5,
+          "political_capital": -12,
+          "health": 0
+        },
+        "option_flavor": "Популизм имеет срок годности. И цену.",
+        "chained_event_id": "car_russia_protests"
+      }
+    ],
+    "tension_change": "+13"
+  },
+  {
+    "event_id": "car_opposition_registration",
+    "country_id": "car",
+    "title": "Оппозиция просит регистрацию нового блока",
+    "description": "Бывшие союзники Бозизе и молодые активисты объединились в платформу BRDC и подали документы на регистрацию. Минюст нашёл «недостатки в учредительных документах». Срок на исправление — 2 недели, до начала избирательной кампании.",
+    "fact_box": "На выборах 2025 года BRDC бойкотировала голосование после отказа в регистрации. Явка упала до 52%, а в ряде округов не открылось ни одного участка.",
+    "question": "Решение министра юстиции?",
+    "options": [
+      {
+        "option_text": "Зарегистрировать. Победите честно",
+        "consequences": {
+          "economy": 0,
+          "people": 10,
+          "military": 0,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Выборы без оппозиции — это плебисцит.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Отказать по формальным основаниям",
+        "consequences": {
+          "economy": 3,
+          "people": -12,
+          "military": 2,
+          "political_capital": 8,
+          "health": 0
+        },
+        "option_flavor": "Чистая победа. Грязная легитимность.",
+        "chained_event_id": "car_election_day"
+      },
+      {
+        "option_text": "Зарегистрировать, но открыть на лидеров «налоговые проверки»",
+        "consequences": {
+          "economy": 5,
+          "people": -8,
+          "military": 0,
+          "political_capital": 0,
+          "health": 0
+        },
+        "option_flavor": "Технически они участвуют. Практически — удушены.",
+        "chained_event_id": "car_election_day"
+      }
+    ],
+    "tension_change": "+8"
+  },
+  {
+    "event_id": "car_election_day",
+    "country_id": "car",
+    "title": "День голосования",
+    "description": "Участки открылись. На севере — обстрелы, два избирательных бюро сгорели. В столице очереди. Наблюдатели Африканского союза фиксируют «странности» в 15% протоколов. ЦИК ждёт вашего звонка.",
+    "fact_box": "Победа с 76% при явке 52% — это поддержка 39% избирателей. Историки называют такие цифры «пирровым мандатом».",
+    "question": "Что скажете председателю ЦИК?",
+    "options": [
+      {
+        "option_text": "«Пусть считают как есть»",
+        "consequences": {
+          "economy": 3,
+          "people": 12,
+          "military": 0,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Вы можете проиграть. И это ваша настоящая победа.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "«Обеспечьте нужный результат»",
+        "consequences": {
+          "economy": 5,
+          "people": -20,
+          "military": 0,
+          "political_capital": 10,
+          "health": 0
+        },
+        "option_flavor": "76,15%. Всем всё ясно. Все молчат.",
+        "chained_event_id": "car_sanctions_threat"
+      },
+      {
+        "option_text": "Отложить итоги «из-за безопасности на севере»",
+        "consequences": {
+          "economy": -10,
+          "people": -15,
+          "military": 0,
+          "political_capital": -15,
+          "health": 0
+        },
+        "option_flavor": "Отложенные выборы — это отложенная бомба.",
+        "chained_event_id": "car_street_protests"
+      }
+    ],
+    "tension_change": "+14"
+  },
+  {
+    "event_id": "car_teacher_strike",
+    "country_id": "car",
+    "title": "Учителя не вышли на работу",
+    "description": "Синдикат учителей объявил бессрочную забастовку: зарплата по $80 в месяц не выплачивалась 4 месяца. 2 миллиона детей сидят дома. В Банги родители устроили автопробег к дворцу.",
+    "fact_box": "Грамотность в ЦАР — 37%. Каждый год забастовки стирают месяцы обучения, которые не наверстаешь.",
+    "question": "Решение?",
+    "options": [
+      {
+        "option_text": "Выплатить долги и проиндексировать зарплаты",
+        "consequences": {
+          "economy": -12,
+          "people": 15,
+          "military": -2,
+          "political_capital": 10,
+          "health": 0
+        },
+        "option_flavor": "Дорого. Но дешевле, чем потерянное поколение.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Угрожать увольнениями участникам забастовки",
+        "consequences": {
+          "economy": 0,
+          "people": -15,
+          "military": 0,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Школы откроются пустыми: учителей некем заменить.",
+        "chained_event_id": "car_street_protests"
+      },
+      {
+        "option_text": "Поручить выплаты «благотворительному фонду» партнёров",
+        "consequences": {
+          "economy": -3,
+          "people": 8,
+          "military": 0,
+          "political_capital": -8,
+          "health": 0
+        },
+        "option_flavor": "Учителя получат деньги. И урок по тому, кто в стране платит.",
+        "chained_event_id": null
+      }
+    ],
+    "tension_change": "+7"
+  },
+  {
+    "event_id": "car_displaced_camp",
+    "country_id": "car",
+    "title": "Лагерь переселенцев требует статуса",
+    "description": "В лагере Мпоко у аэропорта живут 45 тысяч человек, сбежавших от боёв. Уже третий год. Дети, рождённые там, не имеют свидетельств о рождении. Лагерь превращается в город внутри города — с рынком, танцполом и проблемами.",
+    "fact_box": "В стране более 500 тыс. внутренне перемещённых. Каждый пятый никогда не вернётся домой: их сёла стёрты с карты.",
+    "question": "Стратегия для лагеря?",
+    "options": [
+      {
+        "option_text": "Интеграция: документы, участки земли, школы",
+        "consequences": {
+          "economy": -8,
+          "people": 12,
+          "military": -3,
+          "political_capital": 8,
+          "health": 3
+        },
+        "option_flavor": "Дешевле содержания лагеря вечно. Сложнее политически.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Организованное возвращение под охраной",
+        "consequences": {
+          "economy": -3,
+          "people": -12,
+          "military": -5,
+          "political_capital": -5,
+          "health": -5
+        },
+        "option_flavor": "Люди возвращаются в руины, где их ждут те, от кого они бежали.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Оставить как есть: ООН кормит",
+        "consequences": {
+          "economy": 3,
+          "people": -15,
+          "military": 0,
+          "political_capital": -12,
+          "health": -3
+        },
+        "option_flavor": "Лагерь — это памятник вашему правлению.",
+        "chained_event_id": "car_km5_uprising"
+      }
+    ],
+    "tension_change": "+8"
+  },
+  {
+    "event_id": "car_mine_landslide",
+    "country_id": "car",
+    "title": "Оползень на ручном руднике",
+    "description": "На неформальном золотом руднике недалеко от Бамбари сошёл грунт. Погибли 26 копальщиков, в том числе 7 подростков. Родные требуют компенсаций и запрета опасных методов. Концессионеры предлагают «молчание за поддержку».",
+    "fact_box": "Артельная добыча — до 100 тыс. работников, вторая по величине «отрасль занятости» после сельского хозяйства. Годовая смертность — сотни человек.",
+    "question": "Ваш ответ семьям?",
+    "options": [
+      {
+        "option_text": "Компенсации семьям и инспекция всех рудников",
+        "consequences": {
+          "economy": -10,
+          "people": 12,
+          "military": 0,
+          "political_capital": 8,
+          "health": 5
+        },
+        "option_flavor": "Дорого. Но справедливо.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Компенсации тихо, инспекций не будет",
+        "consequences": {
+          "economy": -5,
+          "people": -3,
+          "military": 0,
+          "political_capital": 3,
+          "health": 0
+        },
+        "option_flavor": "Полумера, которая не удовлетворит никого.",
+        "chained_event_id": "car_gold_smuggling"
+      },
+      {
+        "option_text": "Обвинить в трагедии «западных агентов, сеющих хаос»",
+        "consequences": {
+          "economy": 3,
+          "people": -18,
+          "military": 0,
+          "political_capital": -10,
+          "health": 0
+        },
+        "option_flavor": "Люди, похоронившие детей, услышали это. Запомнили.",
+        "chained_event_id": "car_street_protests"
+      }
+    ],
+    "tension_change": "+9"
+  },
+  {
+    "event_id": "car_religious_leader",
+    "country_id": "car",
+    "title": "Имам квартала КМ5 произнёс проповедь",
+    "description": "В пятничной проповеди имам назвал власть «правительством тех, кто продаёт страну тоннами». Запись разошлась по WhatsApp. Служба безопасности готовит обвинение в «подстрекательстве». Половина правительственной коалиции — мусульмане.",
+    "fact_box": "КМ5 — единственный квартал Банги, который не взяли ни мятежники 2013-го, ни наёмники 2020-го. Его уважают даже враги. Трогать его имама — трогать весь баланс столицы.",
+    "question": "Реагируете?",
+    "options": [
+      {
+        "option_text": "Встретиться с имамом. Услышать. Публично",
+        "consequences": {
+          "economy": 0,
+          "people": 10,
+          "military": -2,
+          "political_capital": 8,
+          "health": 0
+        },
+        "option_flavor": "Смирение — тоже власть.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Обвинить и допросить",
+        "consequences": {
+          "economy": -3,
+          "people": -15,
+          "military": 3,
+          "political_capital": -8,
+          "health": 0
+        },
+        "option_flavor": "Из тюрьмы он будет говорить громче.",
+        "chained_event_id": "car_km5_uprising"
+      },
+      {
+        "option_text": "Через посредников передать, что «слово услышано»",
+        "consequences": {
+          "economy": 0,
+          "people": 5,
+          "military": 0,
+          "political_capital": 3,
+          "health": 0
+        },
+        "option_flavor": "Тихий компромисс. Оба сохранили лицо.",
+        "chained_event_id": null
+      }
+    ],
+    "tension_change": "+6"
+  },
+  {
+    "event_id": "car_football_victory",
+    "country_id": "car",
+    "title": "Сборная вышла в финал Кубка африканских наций",
+    "description": "Невозможное: «дикие собаки» победили фаворита и вышли в финал. Банги высыпала на улицы: люди обнимают незнакомцев, солдаты танцуют с гражданскими. Даже оппозиционные каналы пишут «сегодня мы все — одна команда».",
+    "fact_box": "Футбол — единственное, что объединяет ЦАР сильнее, чем религия делит. Последний такой вечер был в 2013 году — накануне самого тёмного года.",
+    "question": "Как использовать момент?",
+    "options": [
+      {
+        "option_text": "Объявить день национального единства и амнистию мелких дел",
+        "consequences": {
+          "economy": 3,
+          "people": 15,
+          "military": 5,
+          "political_capital": 10,
+          "health": 3
+        },
+        "option_flavor": "Неделя единства. Год капитала.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Присвоить победу: «это победа моей политики»",
+        "consequences": {
+          "economy": 0,
+          "people": -8,
+          "military": 0,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Люди запомнят радость. И то, как вы её украли.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Тихо поднять себе зарплату, пока все празднуют",
+        "consequences": {
+          "economy": 5,
+          "people": -12,
+          "military": 0,
+          "political_capital": -10,
+          "health": 0
+        },
+        "option_flavor": "Кто-то заметит. Всегда замечают.",
+        "chained_event_id": "car_journalist_exile"
+      }
+    ],
+    "tension_change": "-15"
+  },
+  {
+    "event_id": "car_aid_kidnap",
+    "country_id": "car",
+    "title": "Похищен сотрудник гуманитарной миссии",
+    "description": "Врач из международной организации похищен на дороге в Боуар. Похитители требуют $2 млн и освобождения двух командиров вооружённой группы. Миссия приостановила половину программ.",
+    "fact_box": "ЦАР — одна из самых опасных стран для гуманитариев: 5 инцидентов в месяц в среднем. Каждый уход миссии лишает сотни тысяч людей медицины.",
+    "question": "Ваши действия?",
+    "options": [
+      {
+        "option_text": "Спецоперация силами армии и партнёров",
+        "consequences": {
+          "economy": 0,
+          "people": 8,
+          "military": 5,
+          "political_capital": 8,
+          "health": 0
+        },
+        "option_flavor": "Рискованно. Но показывает: здесь платят не деньгами.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Заплатить выкуп через посредников",
+        "consequences": {
+          "economy": -10,
+          "people": -5,
+          "military": -3,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Человек жив. Рынок заложников растёт.",
+        "chained_event_id": "car_convoy_ambush"
+      },
+      {
+        "option_text": "Переложить ответственность на ООН",
+        "consequences": {
+          "economy": 0,
+          "people": -8,
+          "military": 0,
+          "political_capital": -8,
+          "health": 0
+        },
+        "option_flavor": "Врач остаётся в яме. Вы — в рейтингах.",
+        "chained_event_id": null
+      }
+    ],
+    "tension_change": "+7"
+  },
+  {
+    "event_id": "car_russia_protests",
+    "country_id": "car",
+    "title": "«Русские, уходите!»",
+    "description": "Перед зданием Национального собрания собрался митинг: студенты, торговцы, даже часть армейских семей. Требование одно — чтобы инструкторы и связанные с ними компании не решали, кто и чем владеет в ЦАР. В руках — плакаты «Мы не колония. Ни чью».",
+    "fact_box": "Настроения меняются: после трёх лет «спасителей» растёт усталость от произвола на блокпостах и от того, что золото уходит, а больницы нет.",
+    "question": "Что делать с протестом?",
+    "options": [
+      {
+        "option_text": "Встретиться с лидерами, пообещать пересмотр контрактов",
+        "consequences": {
+          "economy": -5,
+          "people": 10,
+          "military": -5,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Придётся раздражать тех, кто держит ваш тыл.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Разогнать, объявив протест «заказом Запада»",
+        "consequences": {
+          "economy": 3,
+          "people": -15,
+          "military": 5,
+          "political_capital": -8,
+          "health": 0
+        },
+        "option_flavor": "Лозунг работает неделю. Обида — годы.",
+        "chained_event_id": "car_sanctions_threat"
+      },
+      {
+        "option_text": "Сделать вид, что митинга не было",
+        "consequences": {
+          "economy": 0,
+          "people": -8,
+          "military": 0,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Тишина после игнорирования — это тишина перед вспышкой.",
+        "chained_event_id": null
+      }
+    ],
+    "tension_change": "+11"
+  },
+  {
+    "event_id": "car_diamonds_return",
+    "country_id": "car",
+    "title": "Алмазы возвращаются на легальный рынок",
+    "description": "Эмбарго Кимберлийского процесса снято: официальный экспорт возобновился — 28 876 карат за квартал. Дилеры в Дубае и Антверпене звонят напрямую. Но лицензии пока получили только компании, близкие к окружению.",
+    "fact_box": "До 2013 года алмазы давали 40% экспортной выручки. Сейчас — 12%. Исторический рынок (Ливан, Дубай) готов вернуться за неделю.",
+    "question": "Кому дать лицензии?",
+    "options": [
+      {
+        "option_text": "Открытый тендер с публикацией всех условий",
+        "consequences": {
+          "economy": 12,
+          "people": 8,
+          "military": 0,
+          "political_capital": 5,
+          "health": 0
+        },
+        "option_flavor": "Медленно. Честно. Прозрачно.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Лицензии своим: быстрее и надёжнее",
+        "consequences": {
+          "economy": 8,
+          "people": -10,
+          "military": 0,
+          "political_capital": 8,
+          "health": 0
+        },
+        "option_flavor": "Деньги придут быстро. И вопросы — тоже.",
+        "chained_event_id": "car_smuggling_scandal"
+      },
+      {
+        "option_text": "Лицензии партнёрским структурам за долги по безопасности",
+        "consequences": {
+          "economy": 6,
+          "people": -8,
+          "military": 5,
+          "political_capital": -8,
+          "health": 0
+        },
+        "option_flavor": "Расплачиваетесь активами, а не деньгами.",
+        "chained_event_id": "car_africa_corps"
+      }
+    ],
+    "tension_change": "+4"
+  },
+  {
+    "event_id": "car_chinese_timber",
+    "country_id": "car",
+    "title": "Китайские лесозаготовщики у реки Санга",
+    "description": "Консорциум запросил расширение концессии: ещё 200 тысяч гектаров под сапеле и ироко. Экспорт в Китай вырастет до $40 млн в год. Лесные общины протестуют: без леса — без мёда, без медицины, без земли под пропитание.",
+    "fact_box": "60% африканской древесины уходит в Китай, часто в виде необработанных брёвен. Доля переработки в ЦАР — менее 5%: страна продаёт сырьё и покупает мебель обратно.",
+    "question": "Решение по концессии?",
+    "options": [
+      {
+        "option_text": "Расширить концессию с обязательством переработки на месте",
+        "consequences": {
+          "economy": 12,
+          "people": 3,
+          "military": 0,
+          "political_capital": 3,
+          "health": 0
+        },
+        "option_flavor": "Деньги и рабочие места. Лес уходит медленнее.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Расширить без условий: деньги нужны сейчас",
+        "consequences": {
+          "economy": 15,
+          "people": -12,
+          "military": 0,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Бюджет пополнится. Реки — опустеют.",
+        "chained_event_id": "car_floods"
+      },
+      {
+        "option_text": "Отказать и создать национальный лесной фонд",
+        "consequences": {
+          "economy": -10,
+          "people": 10,
+          "military": 0,
+          "political_capital": 5,
+          "health": 3
+        },
+        "option_flavor": "Лес останется. Бюджет — в минусе.",
+        "chained_event_id": null
+      }
+    ],
+    "tension_change": "+5"
+  },
+  {
+    "event_id": "car_un_mandate",
+    "country_id": "car",
+    "title": "Голосование по мандату миротворцев в ООН",
+    "description": "Миссия MINUSCA стоит налогоплательщикам $1 млрд в год. Ваши союзники в Совбезе предлагают сократить мандат: «страна стабилизирована». Генсек докладывает: без миротворцев армия не удержит провинции и год.",
+    "fact_box": "MINUSCA — 15 тыс. военных и полицейских, единственная сила, присутствующая во всех 20 префектурах. Их уход — это де-факто передача провинций вооружённым группам.",
+    "question": "Позиция вашей делегации?",
+    "options": [
+      {
+        "option_text": "Поддержать полный мандат ещё на год",
+        "consequences": {
+          "economy": -3,
+          "people": 8,
+          "military": 10,
+          "political_capital": 3,
+          "health": 0
+        },
+        "option_flavor": "Принимаете кредит на безопасность под залог суверенитета.",
+        "chained_event_id": null
+      },
+      {
+        "option_text": "Поддержать сокращение: «мы справимся сами»",
+        "consequences": {
+          "economy": 5,
+          "people": -8,
+          "military": -12,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Красиво звучит в ООН. Опасно звучит на севере.",
+        "chained_event_id": "car_rebel_offensive"
+      },
+      {
+        "option_text": "Воздержаться",
+        "consequences": {
+          "economy": 0,
+          "people": -3,
+          "military": -3,
+          "political_capital": -5,
+          "health": 0
+        },
+        "option_flavor": "Не решивший — всегда не прав.",
+        "chained_event_id": null
+      }
+    ],
+    "tension_change": "+4"
+  }
+]

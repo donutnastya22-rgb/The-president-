@@ -1,0 +1,74 @@
+[
+  {
+    "id": "car",
+    "name": "Центральноафриканская Республика",
+    "shortName": "ЦАР",
+    "capital": "Банги",
+    "population": 5513282,
+    "areaKm2": 622984,
+    "currency": "Франк КФА (BEAC, XAF)",
+    "languages": [
+      "французский",
+      "санго"
+    ],
+    "region": "Центральная Африка",
+    "baselineYear": 2025,
+    "populationLabel": "5,5 млн",
+    "facts": [
+      {
+        "label": "Население",
+        "value": "5,5 млн",
+        "note": "2025"
+      },
+      {
+        "label": "Столица",
+        "value": "Банги",
+        "note": "около 870 тыс. жителей"
+      },
+      {
+        "label": "Площадь",
+        "value": "622 984 км²",
+        "note": "UN Data"
+      },
+      {
+        "label": "Валюта",
+        "value": "XAF",
+        "note": "франк КФА BEAC"
+      },
+      {
+        "label": "Доступ к электричеству",
+        "value": "18,2%",
+        "note": "2024 · World Bank"
+      },
+      {
+        "label": "Пользуются интернетом",
+        "value": "13,8%",
+        "note": "2024 · World Bank"
+      },
+      {
+        "label": "Рост ВВП",
+        "value": "4,5%",
+        "note": "2025 · World Bank"
+      },
+      {
+        "label": "ВВП на душу населения",
+        "value": "$556",
+        "note": "2025 · World Bank"
+      }
+    ],
+    "sources": [
+      {
+        "label": "World Bank — Central African Republic",
+        "url": "https://data.worldbank.org/country/central-african-republic"
+      },
+      {
+        "label": "UN Data — Central African Republic",
+        "url": "https://data.un.org/legacy/en/iso/cf.html"
+      },
+      {
+        "label": "World Bank — country overview",
+        "url": "https://www.worldbank.org/ext/en/country/centralafricanrepublic"
+      }
+    ]
+  }
+]
